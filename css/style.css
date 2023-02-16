@@ -178,3 +178,95 @@ header{
     font-size: 25px;
 } */
 
+/* facts section styles */
+.facts-text{
+    margin-left: 150px;
+    margin-bottom: 80px;
+}
+.facts-text h3{
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+    margin-bottom: 20px;
+}
+.facts-text p{
+    color: #727272;
+    width: 542px;
+}
+
+/* achievement section styles */
+.achievement{
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    display: flex;
+    /* justify-items: center; */
+    padding-bottom: 150px;
+    margin: 0 150px;
+}
+.achievement-content{
+    text-align: center;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 100px;
+    
+
+    /* transform: rotate(90deg); */
+}
+.achievement-content img{
+    width: 45.22px;
+    height: 45.22px;
+}
+.achievement-content h3{
+    font-weight: 600;
+    font-size: 45px;
+    color: #424242;
+    margin: 10px 0;
+}
+.achievement-content p{
+    font-weight: 600;
+    font-size: 20px;
+    color: #727272;
+}
+
+/* sponsors section styles */
+.sponsors-content{
+    text-align: center;
+
+}
+.sponsors-content h3{
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+}
+.sponsors-content p{
+    color: #727272;
+    padding: 20px 0;
+}
+.sponsors-images{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-bottom: 130px;
+    filter: grayscale(100%);
+}
+.sponsors-images:hover{
+    filter: none;
+}
+
+
+/* footer styles */
+footer{
+    background: #FFF4E7;
+    border-radius: 8px;
+    margin: 0 50px;
+    margin-bottom: 80px;
+    padding: 30px 200px;
+
+}
+
+footer p{
+    font-size: 20px;
+    color: #727272;
+    text-align: center;
+}
