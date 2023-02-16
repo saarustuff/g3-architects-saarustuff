@@ -80,3 +80,39 @@ header{
 .banner-img:hover{
     filter: grayscale(100%);
 }
+
+
+/* features section style */
+.features{
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 100px;
+}
+.features-img{
+    width: 342px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.features-text{
+    width: 537px;
+}
+.features-text h3{
+    font-weight: 400;
+    font-size: 45px;
+    color: #727272;
+}
+.features-text span{
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.features-text span:hover{
+    color: #424242;
+}
+.features-text p{
+    color: #727272;
+    margin: 25px 0;
+}
