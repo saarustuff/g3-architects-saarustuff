@@ -8,8 +8,7 @@
 }
 
 .primary-btn{
-    width: 180px;
-    height: 64px;
+    padding: 20px 24px;
     background: #FF900E;
     border-radius: 8px;
     border: none;
@@ -132,7 +131,20 @@ header{
     font-size: 45px;
     color: #131313;
     width: 468px;
+    position: relative;
+    padding-left: 25px
 }
+
+.features .features-title::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+}
+
 .features-sub-title{
     width: 586px;
     color: #727272;
@@ -160,23 +172,17 @@ header{
     height: 880px;
 }
 
-/* /////////////////////////////////////////////////////////
-.features-btn{
-    background: #FF900E;
-    border-radius: 8px;
-    color: white;
-    text-align: center;
-    z-index: 1;
-    
+
+.features .features-btn button{
+    padding: 42px 45px;
+    position: relative;
+    transform: translate(-50px, -90px);
 }
-.features-btn h3{
-    font-weight: 700;
-    font-size: 65px;
+.features-btn .title{
+    font-weight: 600;
+    font-size: 50px;
 }
-.features-btn p{
-    font-weight: 500;
-    font-size: 25px;
-} */
+ 
 
 /* facts section styles */
 .facts-text{
@@ -196,23 +202,28 @@ header{
 
 /* achievement section styles */
 .achievement{
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
     display: flex;
-    /* justify-items: center; */
     padding-bottom: 150px;
     margin: 0 150px;
+    justify-content: space-around;
 }
 .achievement-content{
-    text-align: center;
+    width: 241.83px;
+    height: 241.83px;
     border: 1px solid #FF900E;
     border-radius: 8px;
-    padding: 20px;
-    margin-left: 100px;
-    
-
-    /* transform: rotate(90deg); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 1s linear, height 1s linear, transform 1s;
 }
+
+.achievement-content:hover{
+    transform: scale(110%);
+    border: 2px solid #FF900E;
+ }
+
 .achievement-content img{
     width: 45.22px;
     height: 45.22px;
@@ -223,6 +234,7 @@ header{
     color: #424242;
     margin: 10px 0;
 }
+
 .achievement-content p{
     font-weight: 600;
     font-size: 20px;
@@ -254,19 +266,201 @@ header{
     filter: none;
 }
 
+/* contact section style */
+.contact{
+    display: flex;
+    gap: 110px;
+    background: #FFF4E7;
+    margin-top: 115px;
+    padding:50px 200px;
+    padding-bottom: 200px;
+}
+.contact a{
+    text-decoration: none;
+    margin-right: 24px;
+}
+.contact-title{
+    font-weight: 700;
+    font-size: 35px;
+    padding-top: 30px;
+}
+.contact-description{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #474747;
+}
+.contact input[type="text"], input[type="email"], textarea{
+    margin-bottom: 24px;
+    border: 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 18px 30px;
+}
+.contact input[type="text"] {
+margin-top: 20px;
+}
 
 /* footer styles */
 footer{
-    background: #FFF4E7;
-    border-radius: 8px;
-    margin: 0 50px;
-    margin-bottom: 80px;
-    padding: 30px 200px;
+    background: black;
+    /* border-radius: 8px; */
+    /* margin: 0 50px; */
+    /* margin-top: 50px; */
+    /* margin-bottom: 80px; */
+    padding: 40px 200px;
 
 }
 
 footer p{
     font-size: 20px;
-    color: #727272;
+    color: var(--primary-color);
     text-align: center;
+}
+
+
+/*//////////////////////////////////////
+/////////////////////////////////////////
+//////////////////////////////////////////*/
+
+/* Responsive for mobile device */
+@media only screen and (max-width: 576px){
+
+/* header style */
+header{
+    height: 925px;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    padding-left: 20px;
+
+}
+.site-name h3{
+    font-size: 30px
+}
+.nav-function ul{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    text-align: left;
+
+}
+.nav-function ul li, a{
+    font-size: 20px;
+}
+
+/* head-text section style */
+.banner-text h3{
+    font-size: 30px;
+}
+.banner-text p{
+    padding: 0 20px;
+    text-align: center;
+}
+/* banner-img style */
+.banner-img img{
+    width: 90%;
+}
+/* quick-list section style */
+.quick-list{
+    flex-direction: column;
+}
+.quick-list-img{
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+}
+.quick-list-text{
+    text-align: center;
+}
+.quick-list-text h3{
+    font-size: 30px;
+    padding-top: 15px;
+}
+/* features section style */
+.features{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.features-title{
+    font-weight: 600;
+    font-size: 35px;
+    position: relative;
+    padding-left: 35px
+}
+.features .features-title::after{
+    width: 15px;
+}
+.features-sub-title{
+    padding: 25px 20px;
+}
+.features-description{
+    margin: 10px 23px;
+    width: 70%;
+}
+.description-title{
+    font-size: 16px;
+}
+.description-sub-title{
+    padding: 5px 0;
+}
+.features-img img{
+    width: 100%;
+    height: 70%;
+}
+.features .features-btn button{
+    padding: 20px 45px;
+    position: relative;
+    transform: translate(100px, -90px);
+}
+/* facts section styles */
+.facts-text h3{
+    font-size: 35px;
+    margin-top: 780px;
+}
+.facts-text p{
+        width: 242px;
+    }
+/* achievement section styles */
+.achievement{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+.sponsors-content h3{
+    font-size: 35px;
+}
+.sponsors-images{
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 130px;
+    filter: none;
+}
+/* contact section style */
+.contact{
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+    padding:0px 0px;
+    padding-bottom: 20px;
+}
+.contact input[type="text"], input[type="email"], textarea{
+    margin-bottom: 24px;
+    border: 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10px 20px;}
+    footer{
+        background: black;
+        /* border-radius: 8px; */
+        margin: 0 50px;
+        margin-top: 50px;
+        margin-bottom: 350px;
+        padding: 40px 20px;
+    
+    }
 }
